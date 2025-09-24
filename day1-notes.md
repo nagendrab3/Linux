@@ -101,9 +101,7 @@ Command Line Tips
 
 - Background: & to run commands in background
 
-
-
-Lab 1: Basic Commands & Navigation
+**PRACTICE**
 
 ==> Display your current directory
 
@@ -164,3 +162,4 @@ cd ..
 ==> remove file3.txt
 
 rm lab-practice/file3.txt
+
