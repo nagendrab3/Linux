@@ -98,7 +98,7 @@ File Types in Linux
 
 - Sockets (s): Network communication endpoints
 
-PRACTICE:
+**PRACTICE:**
 
 ==> Create a directory called permission-lab and navigate to it
 
@@ -154,4 +154,5 @@ find . -type f -executable
 ==> Display inode number test.txt
 
 ls -i test.txt
+
 
