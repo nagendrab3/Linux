@@ -114,7 +114,7 @@ Regular Expressions Basics
 
 
 
-PRACTICE:
+**PRACTICE:**
 
 ==> create a sample data file with some log entries
 
@@ -176,3 +176,4 @@ grep "^2024-01-16" sample.log
 ==> count how many different dates appear in the log
 
 awk '{print $1}' sample.log | sort | uniq | wc -l
+
