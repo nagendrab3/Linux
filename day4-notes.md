@@ -130,7 +130,7 @@ Best Practices
 - Implement proper password aging policies
 
 
-PRACTICE
+**PRACTICE**
 
 ==> Display information of the current user
 
@@ -191,4 +191,5 @@ usermod -L testuser
 ==> delete testuser account
 
 sudo userdel -r testuser 
+
 
