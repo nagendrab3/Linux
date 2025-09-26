@@ -1,4 +1,5 @@
 Why Text Processing Matters in Linux?
+
 Linux systems generate massive amounts of text data - log files, configuration files, command output, and data files. Text processing is essential for system administration, data analysis, automation, and troubleshooting.
 
 Essential Text Processing Tools
@@ -176,4 +177,5 @@ grep "^2024-01-16" sample.log
 ==> count how many different dates appear in the log
 
 awk '{print $1}' sample.log | sort | uniq | wc -l
+
 
