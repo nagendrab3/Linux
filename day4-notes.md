@@ -1,4 +1,5 @@
 What is Linux Multi-User System?
+
 Linux is designed as a multi-user operating system where multiple users can work simultaneously. Each user has their own account, home directory, and permissions. The system uses users and groups to control access to resources.
 
 Why User Management Matters?
@@ -190,3 +191,4 @@ usermod -L testuser
 ==> delete testuser account
 
 sudo userdel -r testuser 
+
