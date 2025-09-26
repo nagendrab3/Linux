@@ -1,4 +1,5 @@
 What is the Linux Command Line?
+
 The Linux command line, accessed through a terminal or shell is a text-based interface for interacting with the operating system. 
 It provides direct access to system functions and is often more powerful and efficient than graphical interfaces.
 
@@ -162,4 +163,5 @@ cd ..
 ==> remove file3.txt
 
 rm lab-practice/file3.txt
+
 
