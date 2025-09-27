@@ -70,7 +70,7 @@ System Monitoring
 
 - netstat: Network connections and processes
 
-PRACTICE
+**PRACTICE**
 
 ==> Display all running processes in detailed format
 
@@ -132,3 +132,4 @@ killall sleep
 
 ==> show the most CPu-intensive process
 ps aux --sort=-%cpu | head
+
