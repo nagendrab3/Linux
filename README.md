@@ -10,3 +10,5 @@ This repo is a day-by-day log of what I am learning as I explore and deepen my u
 **Day-4 - Linux Multi-User System**
 
 **Day-5 - Linux Processes**
+
+**Day-6 - Package Management**
