@@ -68,7 +68,7 @@ Package States
 
 - Broken: Package has unmet dependencies
 
-PRACTICE
+**PRACTICE**
 
 ==> update package database
 
@@ -129,3 +129,4 @@ sudo apt-mark hold tmux
 ==> show held packages
 
 apt-mark showhold
+
