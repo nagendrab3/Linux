@@ -25,7 +25,7 @@ Process Flow
 
 - Firewall Basics: View and add simple iptables rules for network security
 
-PRACTICE
+**PRACTICE**
 
 ==> Test connectivity to Google DNS server
 
@@ -87,3 +87,4 @@ nslookup google.com
 ==> show routing table
 
 ip route show
+
