@@ -278,3 +278,61 @@ curl http://10.0.0.25:8080
 nmap (if installed):
 
 nmap -p 8080 10.0.0.25
+
+==> What does the df command do?
+
+df shows disk space usage of mounted file systems.
+
+==> What does the du command do?
+
+du shows disk usage of files and directories.
+
+==> What’s the difference between df and du?
+
+df → shows free/used space on mounted file systems.
+
+du → shows space used by individual directories/files
+
+==> How do you check disk usage of all subdirectories in the current directory?
+
+du -sh *
+
+==> What does fdisk do?
+
+fdisk is used to create, delete, and manage partitions on a disk (like /dev/sda). sudo fdisk /dev/sda
+
+==> How do you view all disks and partitions on a Linux system?
+
+lsblk
+# or
+fdisk -l
+
+==> What does the mount command do?
+
+mount attaches a file system (like a disk or partition) to a directory so it can be used.
+
+==> How do you unmount a mounted file system?
+
+sudo umount /mnt	
+
+sudo umount /dev/sdb1
+
+==> How do you make a mount persistent after reboot?
+
+Edit the /etc/fstab file and add an entry for the mount.
+
+/dev/sdb1  /mnt  ext4  defaults  0  2
+
+==> How do you format a new partition to ext4?
+
+sudo mkfs.ext4 /dev/sdb1
+
+==> You have a new partition /dev/sdb1. How would you format it with the ext4 file system?
+
+To format /dev/sdb1 with the ext4 filesystem:
+
+sudo mkfs.ext4 /dev/sdb1
+
+mkfs stands for make file system. You run this before mounting the partition.
+
+sudo mount /dev/sdb1 /mnt
