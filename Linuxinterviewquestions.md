@@ -156,3 +156,125 @@ After installation, if there are missing dependencies, you’ll get error messag
 To install the .rpm package with dependencies resolved, use yum (or dnf on newer systems):
 
 sudo yum install package-name.rpm
+
+==> What is the purpose of the ifconfig command, and what basic information does it display?
+
+ifconfig (interface configuration) is used to view and configure network interfaces on Linux systems.
+
+It shows:
+
+IP addresses (IPv4 and IPv6)
+
+MAC addresses
+
+Network interface status (UP/DOWN)
+
+RX/TX packet stats
+
+
+==> Which command is used to test basic network connectivity to a host, and how does it work?
+
+The ping command is used to test network connectivity between your system and a remote host (like an IP address or domain).
+
+It works by:
+
+Sending ICMP Echo Request packets
+
+Receiving Echo Reply packets (if the host is reachable)
+
+It shows:
+
+Round-trip time (latency)
+
+Packet loss (if any)
+
+Whether the host is reachable
+
+==> What is the difference between wget and curl?
+
+wget is a command-line utility used primarily to download files from the web via HTTP, HTTPS, or FTP.
+
+It’s simple and great for downloading directly to disk.
+
+curl is a more versatile tool used to transfer data to or from a server using various protocols (HTTP, HTTPS, FTP, etc.).
+
+It can display response headers, send POST requests, upload files, and more
+
+wget is mainly for downloading.
+
+curl is for sending/receiving data — it's more suitable for API testing, debugging, and scripting.
+
+
+==> Which command can you use to check which ports are currently open and which services are listening on them?
+
+netstat -tuln
+
+-t: TCP ports
+
+-u: UDP ports
+
+-l: Listening ports only
+
+-n: Show numerical addresses (don’t resolve DNS)
+
+==> How do you use curl to make a GET request and show response headers as well as the body?
+
+To make a GET request and show both the headers and body using curl
+
+curl -i https://example.com
+
+-i stands for include headers in the output.
+
+By default, curl sends a GET request unless you specify otherwise.
+
+curl -i https://api.github.com
+
+Response headers (e.g. HTTP/1.1 200 OK, Content-Type, etc.)
+
+Response body (usually JSON or HTML)
+
+==> What does the following ping output mean?
+
+The output means:
+
+5 packets were sent, and 5 were successfully received.
+
+There was 0% packet loss, which indicates a stable and healthy network connection.
+
+The total time for all pings was 4005 milliseconds (4 seconds).
+
+A stable connection usually has low packet loss (preferably 0%) and consistent round-trip times.
+
+
+==> How would you use curl to send a POST request with JSON data to a REST API endpoint?
+
+To send a POST request with JSON data using curl, you can use:
+
+curl -X POST https://api.example.com/endpoint \
+     -H "Content-Type: application/json" \
+     -d '{"key1": "value1", "key2": "value2"}'
+
+-X POST → Specifies the HTTP method (POST).
+
+-H → Adds a header (here, it's saying the data is JSON).
+
+-d → Sends the actual data in the request body.
+
+==> You’re logged into a Linux server. You want to test if port 8080 is open on a remote host (10.0.0.25).
+Which command can you use from the terminal?
+
+telnet (if available): telnet 10.0.0.25 8080  If the port is open, you'll get a successful connection message.
+
+nc (netcat): nc -zv 10.0.0.25 8080
+
+-z = scan mode (don’t send data)
+
+-v = verbose
+
+curl (if it's a web service):
+
+curl http://10.0.0.25:8080
+
+nmap (if installed):
+
+nmap -p 8080 10.0.0.25
