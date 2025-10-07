@@ -337,3 +337,82 @@ mkfs stands for make file system. You run this before mounting the partition.
 
 sudo mount /dev/sdb1 /mnt
 
+==> What is the difference between adduser and useradd? When would you use one over the other?
+
+useradd is a low-level command. It creates a user account, but doesn’t automatically set up the user’s home directory, default shell, or copy default config files unless you use extra flags (like -m for home directory).
+
+adduser is a higher-level script (on Debian-based systems) that uses useradd in the background. It’s interactive and user-friendly:
+
+Automatically creates a home directory
+
+Prompts for password
+
+Sets shell
+
+Copies default config files from /etc/skel
+
+
+==> How would you modify an existing user alice to change her default shell to /bin/bash? What command would you use?
+
+sudo usermod -s /bin/bash alice
+
+usermod — modifies user account settings
+
+-s — specifies the new shell
+
+/bin/bash — the shell you want to assign
+
+alice — the username
+
+==> How can you add an existing user bob to a group called docker without removing him from any existing groups?
+
+sudo usermod -aG docker bob
+
+-a = append (don’t overwrite existing groups)
+
+-G = specify the group(s) to add the user to
+
+==> How can you delete a user named david along with their home directory and mail spool? What command would you use?
+
+sudo deluser --remove-home david
+
+
+==> How would you create a new group called developers on a Linux system? What command would you use?
+
+sudo groupadd developers
+
+groupadd creates a new group named developers
+
+sudo is required to run it with administrative privileges
+
+
+==> How can you check which groups a user carol belongs to? What command(s) would you use?
+
+id carol will display the user ID, primary group ID, and all supplementary groups that carol belongs to.
+
+groups carol
+
+
+==> How would you lock a user account named mike to prevent them from logging in without deleting the user? What command would you use?
+
+sudo passwd -l mike
+
+
+==> How can you rename an existing user mike to michael? What command would you use?
+
+sudo usermod -l michael mike
+
+
+==> How would you change the primary group of an existing user anna to admins? What command would you use?
+
+sudo usermod -g admins anna
+
+-g sets the primary group for the user.
+
+anna is the username.
+
+The syntax is: usermod -g <group> <user>
+
+==> How can you display a list of all users on a Linux system? Where is this information stored?
+
+cat /etc/passwd
