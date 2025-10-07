@@ -304,7 +304,7 @@ fdisk is used to create, delete, and manage partitions on a disk (like /dev/sda)
 ==> How do you view all disks and partitions on a Linux system?
 
 lsblk
-# or
+or
 fdisk -l
 
 ==> What does the mount command do?
@@ -336,3 +336,4 @@ sudo mkfs.ext4 /dev/sdb1
 mkfs stands for make file system. You run this before mounting the partition.
 
 sudo mount /dev/sdb1 /mnt
+
